@@ -46,6 +46,7 @@
             </el-sub-menu> -->
         </el-menu>
     </van-sticky>
+
     <van-divider :style="{ borderColor: '#888888',padding: '0px', margin: '3px' }">HXOJ</van-divider>
 
     <router-view id="route" v-slot="{ Component }">
@@ -55,27 +56,7 @@
         </transition>
     </router-view>
 
-    <div class="footer">
-      <p>
-        Powered by
-        <a href="https://github.com/"
-           target="_blank"
-           style="text-decoration: none;color:#409EFF;">Linzecong</a>
-        <span>
-          &nbsp; Version: 3.4&nbsp;&nbsp; Docs:&nbsp;&nbsp;
-          <a href="https://docs.lpoj.cn"
-             target="_blank"
-             style="text-decoration: none;color:#409EFF;">LPOJ Docs</a>&nbsp;&nbsp;欢迎加入LPOJ讨论群: 875136693&nbsp;&nbsp;
-          <a target="_blank"
-             href="//shang.qq.com/wpa/qunwpa?idkey=dcc9d5c63a744d5c09eda5dd7f4b208451e66b42ba633ea23ec6fa4d49135825">
-            <img border="0"
-                 src="//pub.idqqimg.com/wpa/images/group.png"
-                 alt="LPOJ讨论群"
-                 title="LPOJ讨论群">
-          </a>
-        </span>
-      </p>
-    </div>
+    <Footer></Footer>
 </template>
 
 <script>
@@ -83,6 +64,7 @@ import { ref, provide, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import register from '@/components/register/register.vue';
 import login from '@/components/login/login.vue';
+import Footer from './components/tools/footer.vue';
 
 export default{
     name: 'app',
@@ -92,14 +74,10 @@ export default{
         const activeIndex = ref('1');
         const isLogin = ref(false);
         const isRegister = ref(false);
-        let windowWidth = ref(document.body.clientWidth);
-        let windowHeight = ref(document.body.clientHeight);
 
         // #region provide_login
         provide('isLogin', isLogin);
         provide('isRegister', isRegister);
-        provide('wwidth', windowWidth);
-        provide('wheight', windowHeight);
         // #endregion
 
         onMounted(() => {
@@ -111,6 +89,7 @@ export default{
     components: {
         register,
         login,
+        Footer,
     }
 }
 </script>

@@ -93,7 +93,6 @@ export default{
         display: block;
         text-align: center;
         position: relative;
-        opacity: 0.8;
         z-index: 1;
     }
 
@@ -103,10 +102,10 @@ export default{
     }
 
     #videoTextDiv{
-        top: 35%;
+        top: 20%;
         left: 30%;
         color: #ffd04b;
-        z-index: 5;
+        z-index: 2;
         float: left;
         position: absolute;
         display: block;
@@ -119,7 +118,6 @@ export default{
         width: var(--cursorSize);
         height: var(--videoTextSize);
         background-color: #545c64;
-        z-index: 5;
         position: absolute;
         animation-name: blink;
         animation-duration: 1s;
@@ -136,9 +134,7 @@ export default{
     }
 
     #tabPage{
-        background-color: black;
         width: 80%;
-        height: 400px;
         margin-left: 10%;
         box-shadow: 2px 2px 5px #888888;
     }

@@ -14,12 +14,6 @@
             <h2 class="registerText">Register</h2>
             <div id="inputAccAndPwd">
                 <van-cell-group inset>
-                    <!-- <MyField fieldName="UserAcc"
-                    labelName="Account"
-                    plhd="至少6位大小写字母及数字构成的字符串"
-                    mxl="8"
-                    :bindInfo="registerInfo.userAcc"
-                    ></MyField> -->
                     <div v-for="(item, index) in registerFormInfo" :key="index">
                         <MyField
                         :fieldName="item[0]"
@@ -101,5 +95,5 @@ export default{
 
     .registerText{ text-align: center; }
 
-    .zdex{ z-index: 99;}
+    .zdex{ z-index: 999;}
 </style>
