@@ -58,7 +58,7 @@
     <div class="footer">
       <p>
         Powered by
-        <a href="https://github.com/Linzecong/LPOJ"
+        <a href="https://github.com/"
            target="_blank"
            style="text-decoration: none;color:#409EFF;">Linzecong</a>
         <span>
